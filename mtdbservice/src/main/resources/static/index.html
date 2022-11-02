@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<!-- Load SAP UI5 framework from internet - SAP UI5 bootstrap -->			
+		<script src="https://sapui5.hana.ondemand.com/resources/sap-ui-core.js"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_fiori_3_dark"
+				data-sap-ui-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{
+					"anubhav":"./"
+				}'></script>
+		
+		<script>
+		
+			var oMain = new sap.ui.view({
+										viewName: "anubhav.view.Main",
+										type: "XML",
+										id:"idMain"
+			});
+			
+			//create master view object
+			var oMaster = new sap.ui.view({
+										viewName: "anubhav.view.Master",
+										type: "XML",
+										id:"idMaster"
+			});
+			
+			//get the app container object from main view
+			var oAppCon = oMain.byId("appCon");
+			
+			//add newly created master view inside the container
+			oAppCon.addPage(oMaster);
+			
+			oMain.placeAt("content");
+		
+		</script>
+		
+			
+	</head>
+	
+	<body class="sapUiBody">
+		
+		<div id="content"></div>
+		
+	</body>
+</html>

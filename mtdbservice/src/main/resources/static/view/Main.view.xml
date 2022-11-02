@@ -1,0 +1,4 @@
+<core:View xmlns:core="sap.ui.core.mvc" xmlns="sap.m" controllerName="anubhav.controller.Main">
+
+	<App id="appCon"></App>
+</core:View>
